@@ -27,39 +27,55 @@ a {
   margin: 0 auto;
 }
 
-/* Awal Navbar */
+/* Navigation */
 nav {
+  position: fixed;
+  width: 100%;
+  box-shadow: 2px 5px 10px 2px rgba(63, 61, 86, 0.25);
+  /* border: 1px solid red; */
+}
+.navigation {
   display: flex;
   font-family: var(--font-1);
   font-size: 18px;
   background-color: var(--bg-color);
   justify-content: space-between;
-  padding: 15px 70px;
   align-items: center;
-}
 
-nav .logo {
+  /* border: 1px solid red; */
+}
+.navigation {
+  /* border: 1px solid red; */
+  padding: 10px 0px;
+}
+.navigation .logo {
   letter-spacing: 3px;
   color: var(--text-green);
   font-size: 36px;
   font-weight: var(--font-bold);
+  font-family: var(--font-2);
 }
 
-nav ul {
+.navigation ul {
   display: flex;
   list-style: none;
-  width: 40%;
+  width: 30%;
   justify-content: space-between;
+  /* border: 1px solid red; */
+  font-weight: var(--font-semi-bold);
 }
 
-nav ul li a {
+.navigation ul li a {
   color: var(--text-dark);
   text-decoration: none;
+  font-size: 18px;
+  /* border: 1px solid red; */
 }
 
-nav ul li a:hover {
+.navigation ul li a:hover {
   color: var(--text-green);
 }
+/* End Navigation */
 
 /* Burger Menu */
 .menu-toggle {
@@ -118,7 +134,36 @@ nav ul li a:hover {
   transform: rotate(-45deg) translate(-1px, 0);
   background-color: var(--text-dark);
 }
-/* End Navbar */
+/* Burger Menu Animation */
+
+/* Hero Section */
+
+.content-hero {
+  display: flex;
+  margin-top: 200px;
+  background-size: cover;
+  /* border: 1px solid red; */
+  /* background-size: cover; */
+  height: 75vh;
+}
+.content-hero .section-hero {
+  margin-top: 50px;
+  font-family: var(--font-1);
+}
+.content-hero .section-hero h1 {
+  font-size: 36px;
+  font-weight: var(--font-bold);
+}
+.content-hero .section-hero .btn-hero {
+  margin-top: 30px;
+}
+.content-hero .section-hero h2 {
+  font-size: 24px;
+  margin-top: -20px;
+  font-weight: var(--font-medium);
+}
+
+/* End Hero Section */
 
 /* Section Title */
 .section-title h1 {
@@ -164,45 +209,6 @@ nav ul li a:hover {
   transition: 0.1s all;
 }
 /* End Button Green */
-
-/* Hero Section*/
-#hero {
-  padding-top: 150px;
-  font-family: var(--font-1);
-}
-
-#hero .section-hero h1 {
-  font-weight: var(--font-bold);
-  font-size: 36px;
-  display: flex;
-  padding-left: 70px;
-}
-
-.content-hero .description .text h2 {
-  font-size: 24px;
-  font-weight: var(--font-medium);
-  margin-left: -15px;
-  width: 600px;
-  margin-top: -10px;
-}
-
-.content-hero .description {
-  display: flex;
-}
-
-.content-hero .description .text h2 span {
-  display: flex;
-}
-
-.container .content-hero .btn-hero {
-  margin-top: 80px;
-  margin-left: -600px;
-}
-
-.container .content-hero .img-hero {
-  margin-left: 350px;
-  margin-top: -100px;
-}
 
 /* .about  */
 .content-about {
