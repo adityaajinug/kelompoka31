@@ -11,21 +11,66 @@
   --font-semi-bold: 600;
   --font-bold: 700;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   background-color: var(--bg-color);
-  overflow-x: hidden;
 }
-
 a {
   text-decoration: none;
 }
-
 .container {
-  width: 1170px;
-  padding: 0 15px;
+  max-width: 1170px;
+  padding: 0 20px;
   margin: 0 auto;
+  overflow: hidden;
+  /* border: 1px solid red; */
 }
+/* Section Title */
+.section-title h1 {
+  margin-top: 117px;
+  font-weight: var(--font-bold);
+  text-align: center;
+  font-size: 36px;
+  color: var(--text-green);
+  font-family: var(--font-1);
+}
+.section-title h2 {
+  margin-top: -15px;
+  font-weight: var(--font-bold);
+  text-align: center;
+  font-size: 24px;
+  color: var(--text-dark);
+  font-family: var(--font-1);
+}
+/* End Section title */
+
+/* Button Green */
+.btn-green {
+  /* margin-top: 10px;
+  margin-left: 10px; */
+  border: none;
+  padding: 12px 50px;
+  background-color: var(--btn-color);
+  color: var(--text-white);
+  border-radius: 10px;
+  font-family: var(--font-1);
+  font-weight: var(--font-semi-bold);
+  font-size: 16px;
+}
+.btn-green:hover {
+  background-color: var(--bg-green);
+  cursor: pointer;
+}
+.btn-green:focus {
+  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+    rgba(50, 50, 93, 0.2) 0 6px 15px 0, rgba(0, 0, 0, 0.1) 0 2px 2px 0,
+    rgba(50, 151, 211, 0.3) 0 0 0 4px;
+  transition: 0.1s all;
+}
+/* End Button Green */
 
 /* Navigation */
 nav {
@@ -165,51 +210,6 @@ nav {
 
 /* End Hero Section */
 
-/* Section Title */
-.section-title h1 {
-  margin-top: 117px;
-  font-weight: var(--font-bold);
-  text-align: center;
-  font-size: 36px;
-  color: var(--text-green);
-  font-family: var(--font-1);
-}
-
-.section-title h2 {
-  margin-top: -20px;
-  font-weight: var(--font-bold);
-  text-align: center;
-  font-size: 24px;
-  color: var(--text-dark);
-  font-family: var(--font-1);
-}
-/* End Section title */
-
-/* Button Green */
-.btn-green {
-  /* margin-top: 10px;
-  margin-left: 10px; */
-  border: none;
-  padding: 12px 50px;
-  background-color: var(--btn-color);
-  color: var(--text-white);
-  border-radius: 10px;
-  font-family: var(--font-1);
-  font-weight: var(--font-semi-bold);
-  font-size: 16px;
-}
-.btn-green:hover {
-  background-color: var(--bg-green);
-  cursor: pointer;
-}
-.btn-green:focus {
-  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
-    rgba(50, 50, 93, 0.2) 0 6px 15px 0, rgba(0, 0, 0, 0.1) 0 2px 2px 0,
-    rgba(50, 151, 211, 0.3) 0 0 0 4px;
-  transition: 0.1s all;
-}
-/* End Button Green */
-
 /* .about  */
 .content-about {
   /* border:1px solid rgb(255, 0, 0); */
@@ -239,38 +239,47 @@ nav {
 /* end about */
 
 /* Services */
-.services .content-services {
+.content-services {
   display: flex;
-
   padding: 5px 100px;
 }
-.services .content-services .card-left,
+.content-services .card-left,
 .card-right {
   background-color: #ffff;
   border-radius: 20px;
-  box-shadow: 2px 2px 10px 3px rgba(63, 61, 86, 0.25);
+  box-shadow: 2px 5px 10px 2px rgba(63, 61, 86, 0.25);
   padding: 44px;
   font-family: var(--font-1);
   display: flex;
   margin-top: 50px;
+  margin-bottom: 20px;
+  transition: 0.3s ease-in-out;
 }
-.services .content-services .card-right {
+.content-services .card-left:hover,
+.card-right:hover {
+  box-shadow: 2px 5px 8px 2px rgba(0, 191, 166, 0.3);
+  transition: 0.3s ease-in-out;
+  color: #00ac95;
+  transform: scale(1.08);
+  position: relative;
+}
+.content-services .card-right {
   margin-left: 40px;
 }
-.services .content-services .card-left .desc-services,
+.content-services .card-left .desc-services,
 .card-right .desc-services {
   margin-left: 35px;
 }
-.services .content-services .card-left .img-services,
+.content-services .card-left .img-services,
 .card-right .img-services {
   margin-top: 10px;
 }
-.services .content-services .card-left .desc-services span,
+.content-services .card-left .desc-services span,
 .card-right .desc-services span {
   font-size: 18px;
   font-weight: var(--font-bold);
 }
-.services .content-services .card-left .desc-services p,
+.content-services .card-left .desc-services p,
 .card-right .desc-services p {
   font-size: 18px;
   margin-top: 5px;
@@ -299,12 +308,12 @@ nav {
   border-radius: 5px;
   padding: 8px 10px;
 }
+/* End Contact */
 
 .btn-send {
   text-align: center;
   margin-top: 30px;
 }
-/* End Contact */
 
 /* Footer */
 .footer-list li {

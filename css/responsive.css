@@ -1,79 +1,244 @@
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
+  .container {
+    max-width: 200px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Section Title */
+  .section-title h1 {
+    font-size: 24px;
+  }
+  .section-title h2 {
+    font-size: 18px;
+  }
+  /* End Section Title */
+
+  /* Hero Section */
+  .content-hero .section-hero h1 {
+    font-size: 24px !important;
+  }
+  .content-hero .section-hero h2 {
+    font-size: 18px !important;
+  }
+  /* End Hero Section */
+
+  /* About */
+  .content-about .description .text {
+    font-size: 14px !important;
+  }
+  /* End About */
+
+  /* Services */
+  .content-services .card-left .img-services img,
+  .card-right .img-services img {
+    width: 80%;
+    /* border: 1px solid red; */
+  }
+  .content-services .card-left .desc-services span,
+  .card-right .desc-services span {
+    font-size: 14px;
+  }
+  .content-services .card-left .desc-services p,
+  .card-right .desc-services p {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  .content-services .card-left:hover,
+  .card-right:hover {
+    transform: scale(1.08);
+  }
+  /* End Services */
+
+  /* Footer */
+  .footer-list li {
+    width: auto;
+    float: none;
+  }
+  .footer {
+    width: auto;
+  }
+  .footer-logo {
+    width: auto;
+  }
+  .footer-list {
+    float: right;
+    width: auto;
+  }
+  .footer-list li {
+    width: auto;
+  }
+  .footer-bottom {
+    width: auto;
+    display: block;
+  }
+  /* End Footer */
+}
+
+/*applies to small devices (landscape phones, less than 768px) */
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Hero Section */
+  .content-hero {
+    display: block;
+  }
+  .content-hero .section-hero {
+    text-align: center;
+  }
+  .content-hero .img-hero {
+    margin-top: 60px !important;
+    margin-bottom: 40px !important;
+    padding: 0px 20px 20px 20px;
+  }
+
+  /* End Hero Section */
+
+  /* About */
+  .content-about {
+    display: block !important;
+    padding-bottom: 10px;
+  }
+  .content-about .img-about {
+    text-align: center;
+  }
+  .content-about .description {
+    text-align: center;
+    margin-top: 20px !important;
+    margin-left: 0px !important;
+  }
+
+  /* End About */
+
+  /* Services */
+  .content-services {
+    /* border: 1px solid red; */
+    display: block;
+    margin-top: 0px;
+  }
+  .content-services .card-left,
+  .card-right {
+    /* border: 1px solid red; */
+    margin-top: 10px;
+  }
+  .content-services .card-right {
+    margin-left: 0px;
+  }
+  /* End Services */
+}
+
+/* applies to medium devices (tablets, less than 992px) */
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Button Green */
+  .btn-green {
+    padding: 10px 30px;
+    font-size: 14px;
+  }
+  /* End Button Green */
+
+  /* Navigation */
   .menu-toggle {
     display: flex;
   }
-
-  nav ul {
+  .removeNav {
+    display: none;
+  }
+  .navigation ul {
     position: absolute;
     right: 0;
     top: 0;
-    width: 20%;
-    height: 40vh;
-
+    width: 35%;
+    height: 100vh;
+    background-color: #fff;
+    border-radius: 10px;
     justify-content: space-evenly;
     flex-direction: column;
-    box-shadow: inset -3px -3px 7px #00bfa6, inset 3px 3px 5px #ceced1;
+    box-shadow: 12px 15px 30px 5px rgba(63, 61, 86, 0.25);
+    /* box-shadow: inset -3px -3px 7px #00bfa6, inset 3px 3px 5px #ceced1; */
     transform: translateX(100%);
     transition: all 1.2s;
   }
 
-  nav ul.slide {
+  .navigation ul.slide {
     transform: translateX(0);
+    /* display: none !important; */
   }
-}
+  /* End Navigation */
 
-/*applies to small devices (landscape phones, less than 768px) */
-@media (max-width: 768px) {
-  nav ul {
-    width: 30%;
+  /* Hero Section */
+
+  .content-hero .section-hero {
+    margin-top: 0px;
   }
-}
+  .content-hero .section-hero h1 {
+    font-size: 30px;
+  }
+  .content-hero .section-hero h2 {
+    font-size: 20px;
+  }
 
-/* applies to medium devices (tablets, less than 992px) */
-@media (max-width: 992px) {
-}
-/*responsive footer*/
-@media (max-width: 576px) {
+  .content-hero .img-hero img {
+    width: 100%;
+  }
+
+  /* End Hero Section */
+
+  /* About */
+
+  .content-about .img-about img {
+    width: 300px;
+    margin-top: 20px;
+  }
+  .content-about .description {
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+  .content-about .description .text {
+    font-size: 18px;
+    margin-top: 0px;
+  }
+  /* End About */
+
+  /* Services */
+  .content-services {
+    padding: 5px 50px;
+  }
+  .content-services .card-left,
+  .card-right {
+    padding: 30px;
+  }
+  .content-services .card-left .img-services,
+  .card-right .img-services {
+    margin-top: 20px;
+  }
+  .content-services .card-left .desc-services,
+  .card-right .desc-services {
+    margin-left: 25px;
+    font-size: 16px;
+  }
+  /* End Services */
+
+  /* Footer */
   .footer-list li {
     width: auto;
-    float: none;
   }
   .footer {
     width: auto;
-    float: none;
-  }
-  .footer-logo {
-    width: auto;
-    float: none;
-  }
-  .footer-list {
-    float: right;
-    width: auto;
-  }
-  .footer-list li {
-    width: auto;
-    float: none;
-  }
-  .footer-bottom {
-    text-align: center;
     display: block;
-    vertical-align: middle;
-  }
-}
-
-/*applies to small devices (landscape phones, less than 768px) */
-@media (max-width: 768px) {
-  .footer-list li {
-    width: auto;
-    float: none;
-  }
-  .footer {
-    width: auto;
-    float: none;
+    overflow: hidden;
   }
   .footer-logo {
     width: auto;
-    float: none;
   }
   .footer-list {
     float: right;
@@ -81,72 +246,10 @@
   }
   .footer-list li {
     width: auto;
-    float: none;
   }
   .footer-bottom {
     width: auto;
-    float: none;
+    display: block;
   }
+  /* End Footer */
 }
-
-/* applies to medium devices (tablets, less than 992px) */
-@media (max-width: 992px) {
-  .footer-list li {
-    width: auto;
-    float: none;
-  }
-  .footer {
-    width: auto;
-    float: none;
-  }
-  .footer-logo {
-    width: auto;
-    float: none;
-  }
-  .footer-list {
-    float: right;
-    width: auto;
-  }
-  .footer-list li {
-    width: auto;
-    float: none;
-  }
-  .footer-bottom {
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-/* applies to medium devices (tablets, less than 992px) */
-@media (max-width: 1300px) {
-  .footer-list li {
-    width: auto;
-    float: none;
-  }
-  .footer {
-    display: inline-block;
-    vertical-align: top;
-  }
-  .footer-logo {
-    width: auto;
-    float: none;
-  }
-  .footer-list {
-    float: right;
-    width: auto;
-  }
-  .footer-list li {
-    width: auto;
-    float: none;
-  }
-  .footer-bottom {
-    display: inline-block;
-    vertical-align: top;
-  }
-  .footer-bottom span {
-    vertical-align: middle;
-    text-align: center;
-    padding: 12px;
-    padding-right: 1257px;
-  }
-}
-/*end footer*/
