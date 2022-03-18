@@ -54,17 +54,14 @@
   /* Footer */
   .footer-list li {
     width: auto;
-    float: none;
-  }
-  .footer {
-    width: auto;
   }
   .footer-logo {
-    width: auto;
+    display: none;
   }
   .footer-list {
-    float: right;
-    width: auto;
+    text-align: center;
+    /* border: 1px solid red; */
+    margin-top: 10px;
   }
   .footer-list li {
     width: auto;
